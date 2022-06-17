@@ -1,6 +1,6 @@
 
 // We create the tile layer that will be the background of our map.
-let streets = L.tileLayer('https://api.mapbox.com/styles/v1/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     accessToken: API_KEY
@@ -23,7 +23,7 @@ let baseMaps = {
 let map = L.map('mapid', {
   center: [43.7, -79.3],
   zoom: 11,
-  layers: [satelliteStreets]
+  layers: [streets]
 })
 
 // Pass our map layers into our layers control and add the layers control to the map.
